@@ -1,0 +1,9 @@
+# Version of python: 3.8.10
+# Package requirements for the project
+Django==4.2.6
+whitenoise==6.6.0
+gunicorn
+paho-mqtt
+djangorestframework
+markdown
+django-filter
