@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HT C.O & AIoT</title>
+    <link rel="stylesheet" href="{% static "templates/css/templates.css" %}">
+    <body>
+        <div class="taskbar">
+            <div class="profile">
+                <image src="{% static "templates/img/image-user.svg" %}" class="avatar"></image>
+                <div class="user-login">
+                    <div class="username">20522097</div>
+                    <a href="/login" class="logout">Log out</a>
+                </div>
+            </div>
+            <ul class="menu">
+                <li><a href = "#" class="menu-option-selection" name="Home">Home</a></li>
+                <li><a href = "/register_node" class="menu-option" name="Register Node">Register Node</a></li>
+                <li><a href = "/node_status" class="menu-option" name="Node Status">Node Status</a></li>
+                <li><a href = "/mode_history" class="menu-option" name="Node History">Node History</a></li>
+            </ul>
+            <div class="copyright">© 2023 UIT20522097</div>
+        </div>
+    </body>
+    <script src="{% static 'templates/js/home.js' %}"></script>
+</html>
