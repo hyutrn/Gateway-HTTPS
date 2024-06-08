@@ -1,0 +1,451 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HT C.O & AIoT</title>
+    <link rel="stylesheet" href="{% static "templates/css/node_status.css" %}">
+    <body>
+        <div class="Tabbar">
+            <div class="Information">
+                <img src="/static/templates/img/image-user.svg" alt="user-face">
+                <div class="User-function">
+                    <div id="Username">20522097</div>
+                    <a class="Logout" href="#">Log out</a>
+                </div>
+            </div>
+            <div class="Menu">
+                <a href="/home" class="menu-option">
+                    <span>Home</span>
+                </a>
+                <a href="#" class="menu-option">
+                    <span>Register Node</span>
+                </a>
+                <a href="#" class="menu-option selected">
+                    <span>Node Status</span>
+                </a>
+                <a href="#" class="menu-option">
+                    <span>Node History</span>
+                </a>
+            </div>
+            <div class="Copyright">© 2023 UIT20522097</div>
+        </div>
+        <div class="Function">
+            <div class="Sensors">
+                <span>Sensors:</span>
+                <div class="Sensor-table">
+                    <!-- <div class="Sensor-node">
+                        <span id="1">ID: 1</span>
+                        <div class="Information">
+                            <div class="Sensor-information Temperature1">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Temperature2">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Air-humidity1">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Air-humidity2">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Soil-moisture1">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Soil-moisture2">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Light-intensity1">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Light-intensity2">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sensor-node Disabled">
+                        <span id="2">ID: 2</span>
+                        <div class="Information">
+                            <div class="Sensor-information Temperature1 Disabled">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Temperature2 Disabled">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Air-humidity1 Disabled">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Air-humidity2 Disabled">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Soil-moisture1 Disabled">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Soil-moisture2 Disabled">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Light-intensity1 Disabled">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Light-intensity2 Disabled">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sensor-node">
+                        <span id="3">ID: 3</span>
+                        <div class="Information">
+                            <div class="Sensor-information Temperature1">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Temperature2 Disabled">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Air-humidity1">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Air-humidity2 Disabled">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Soil-moisture1">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Soil-moisture2">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Light-intensity1">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Light-intensity2">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Sensor-node">
+                        <span id="4">ID: 4</span>
+                        <div class="Information">
+                            <div class="Sensor-information Temperature1">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Temperature2">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Air-humidity1">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Air-humidity2">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Soil-moisture1 Disabled">
+                                <span>Sensor 1:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+                            <div class="Sensor-information Soil-moisture2">
+                                <span>Sensor 2:</span>
+                                <div class="Value-sensor">
+                                    <span>29.9</span>
+                                    <img alt="icon">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="Actuators">
+                <div class="Actuators-function">
+                    <span>Actuators:</span>
+                    <label class="Switch" id="automatic">
+                        <input type="checkbox">
+                        <span class="Slider round"></span>
+                    </label>
+                </div>
+                <div class="Actuators-table">
+                    <!-- <div class="Actuator-node">
+                        <span id="11">ID: 11</span>
+                        <div class="Information">
+                            <div class="Actuator-information Motor1">
+                                <span>Motor 1:</span>
+                                <div class="Control">
+                                    <label class="Switch">
+                                        <input type="checkbox">
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor2">
+                                <span>Motor 2:</span>
+                                <div class="Control">
+                                    <label class="Switch">
+                                        <input type="checkbox">
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor3">
+                                <span>Motor 3:</span>
+                                <div class="Control">
+                                    <label class="Switch">
+                                        <input type="checkbox">
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor4">
+                                <span>Motor 4:</span>
+                                <div class="Control">
+                                    <label class="Switch">
+                                        <input type="checkbox">
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Actuator-node Disabled">
+                        <span id="12">ID: 12</span>
+                        <div class="Information">
+                            <div class="Actuator-information Motor1 Disabled">
+                                <span>Motor 1:</span>
+                                <div class="Control">
+                                    <label class="Switch Disabled">
+                                        <input type="checkbox" disabled>
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor2 Disabled">
+                                <span>Motor 2:</span>
+                                <div class="Control">
+                                    <label class="Switch Disabled">
+                                        <input type="checkbox" disabled>
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor3 Disabled">
+                                <span>Motor 3:</span>
+                                <div class="Control">
+                                    <label class="Switch Disabled">
+                                        <input type="checkbox" disabled>
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor4 Disabled">
+                                <span>Motor 4:</span>
+                                <div class="Control">
+                                    <label class="Switch Disabled">
+                                        <input type="checkbox" disabled>
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Actuator-node">
+                        <span id="13">ID: 13</span>
+                        <div class="Information">
+                            <div class="Actuator-information Motor1">
+                                <span>Motor 1:</span>
+                                <div class="Control">
+                                    <label class="Switch">
+                                        <input type="checkbox">
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor2">
+                                <span>Motor 2:</span>
+                                <div class="Control">
+                                    <label class="Switch">
+                                        <input type="checkbox">
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor3">
+                                <span>Motor 3:</span>
+                                <div class="Control">
+                                    <label class="Switch">
+                                        <input type="checkbox">
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor4">
+                                <span>Motor 4:</span>
+                                <div class="Control">
+                                    <label class="Switch">
+                                        <input type="checkbox">
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Actuator-node">
+                        <span id="14">ID: 14</span>
+                        <div class="Information">
+                            <div class="Actuator-information Motor1 Disabled">
+                                <span>Motor 1:</span>
+                                <div class="Control">
+                                    <label class="Switch Disabled">
+                                        <input type="checkbox" disabled>
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor2">
+                                <span>Motor 2:</span>
+                                <div class="Control">
+                                    <label class="Switch">
+                                        <input type="checkbox">
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor3">
+                                <span>Motor 3:</span>
+                                <div class="Control">
+                                    <label class="Switch">
+                                        <input type="checkbox">
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="Actuator-information Motor4">
+                                <span>Motor 4:</span>
+                                <div class="Control">
+                                    <label class="Switch">
+                                        <input type="checkbox">
+                                        <span class="Slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="{% static "templates/js/home.js" %}"></script>
+    <script src="{% static "templates/js/mqtt.min.js" %}"></script>
+    <script src="{% static "templates/js/node_status.js" %}"></script>
+</html>
