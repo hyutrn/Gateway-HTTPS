@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Nodes</h1>
+
+<ul>
+  {% for x in nodes %}
+    <li>{{ x.id }}: {{ x.feature }}</li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>

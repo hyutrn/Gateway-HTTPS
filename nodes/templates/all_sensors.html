@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Sensors</h1>
+{% comment %}
+class Sensor(models.Model):
+    id = models.AutoField(primary_key=True)
+    id_sensor = models.ForeignKey(Node, on_delete=models.CASCADE)
+    date_time = models.DateTimeField(auto_now_add=True)
+    air_temperature = models.FloatField(null=True)
+    air_humidity = models.FloatField(null=True)
+    soil_moisture = models.FloatField(null=True)
+    light_intensity = models.FloatField(null=True)
+
+    def __str__(self):
+        return f"{self.id}: {self.id_sensor} - {self.date_time}"
+{% endcomment %}
+<ul>
+  {% for x in sensors %}
+    <li><ul>{{ x.id }} - Node id {{ x.id_sensor_id }}:
+        <li>date_time: {{ x.date_time }}</li>
+        <li>air_temperature: {{ x.air_temperature }}</li>
+        <li>air_humidity: {{ x.air_humidity }}</li>
+        <li>soil_moisture: {{ x.soil_moisture }}</li>
+        <li>light_intensity: {{ x.light_intensity }}</li>
+      </ul>
+    </li>
+  {% endfor %}
+</ul>
+
+</body>
+</html>
