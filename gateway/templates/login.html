@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HT C.O & AIoT</title>
+    <link rel="stylesheet" href="{% static 'templates/css/login.css' %}">
+</head>
+<body>
+    <div class="card">
+        <form>
+            <h2>LOGIN</h2>
+            <div class="input-group">
+                <input type="text" placeholder="Username" name="username" id="username" require>
+                <input type="password" placeholder="Password" name="password" id="password" require>
+            </div>
+            <div class="input-group">
+                <button name="login" class="btn">Login</button>
+            </div>
+        </form>
+    </div>
+</body>
+    <!-- import app.js -->
+    <script src="{% static 'templates/js/login.js' %}"></script>
+</html>
